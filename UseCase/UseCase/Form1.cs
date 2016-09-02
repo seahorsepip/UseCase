@@ -16,5 +16,21 @@ namespace UseCase
         {
             InitializeComponent();
         }
+
+        private void diagram_Paint(object sender, PaintEventArgs e)
+        {
+            UseCase.Draw(e);
+        }
+        private void diagram_Resize(object sender, EventArgs e)
+        {
+            diagram.Invalidate();
+        }
+
+        private void addActor_Click(object sender, EventArgs e)
+        {
+            UseCase.Actor actor = new UseCase.Actor();
+            UseCase.Add(actor);
+            diagram.Invalidate();
+        }
     }
 }
