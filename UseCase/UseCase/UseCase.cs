@@ -26,6 +26,14 @@ namespace UseCase
         {
             actors.Add((Actor)o);
         }
+
+        public static int Height
+        {
+            get
+            {
+                return actors.Count * 140;
+            }
+        }
         
         public static Object getObject(Point coordinates)
         {
@@ -55,12 +63,12 @@ namespace UseCase
         {
             int x = 0;
             int y = 0;
-            int width = 80;
-            int height = 80;
-            string name;
+            int width = 100;
+            int height = 140;
+            string name = "Actor";
             Color color = Color.Black;
-            int margin = 10;
-            Font font = new Font("Segoe UI", 8);
+            int margin = 20;
+            Font font = new Font("Segoe UI", 12);
             StringFormat stringFormat = new StringFormat();
 
             public Actor()
@@ -75,7 +83,17 @@ namespace UseCase
                 //Set coordinates
                 y = height * position;
 
-                var actorHeight = height - 2 * margin - 10;
+                var actorHeight = height - 2 * margin;
+
+                int stringWidth = (int)e.Graphics.MeasureString(name.Trim(), font).Width;
+
+                if(stringWidth > 100)
+                {
+                    width = stringWidth;
+                } else
+                {
+                    width = 100;
+                }
 
                 //Pen
                 Pen pen = new Pen(color, 1);
@@ -100,7 +118,7 @@ namespace UseCase
                 e.Graphics.DrawLine(pen, legsStart, new Point(head.X + head.Width, y + actorHeight));
 
                 //Name
-                e.Graphics.DrawString(name, font, new SolidBrush(Color.Black), width / 2, y + actorHeight + 10, stringFormat);
+                e.Graphics.DrawString(name, font, new SolidBrush(color), width / 2, y + actorHeight + 20, stringFormat);
             }
 
             public int X
