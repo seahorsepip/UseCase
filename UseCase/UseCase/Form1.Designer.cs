@@ -44,6 +44,7 @@
             this.diagram.Size = new System.Drawing.Size(840, 699);
             this.diagram.TabIndex = 0;
             this.diagram.TabStop = false;
+            this.diagram.Click += new System.EventHandler(this.diagram_Click);
             this.diagram.Paint += new System.Windows.Forms.PaintEventHandler(this.diagram_Paint);
             this.diagram.Resize += new System.EventHandler(this.diagram_Resize);
             // 
