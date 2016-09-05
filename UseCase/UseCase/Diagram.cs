@@ -55,6 +55,19 @@ namespace UseCase
             }
         }
 
+        public static List<Actor> Actors
+        {
+            get
+            {
+                return actors;
+            }
+
+            set
+            {
+                actors = value;
+            }
+        }
+
         public static Object getObject(Point coordinates)
         {
             for (int i = 0; i < actors.Count; i++)
@@ -268,12 +281,14 @@ namespace UseCase
             Color color = Color.Black;
             Font font = new Font("Segoe UI", 12);
             StringFormat stringFormat = new StringFormat();
+            List<Actor> actors = new List<Actor>();
 
             public UseCase()
             {
 
                 stringFormat.Alignment = StringAlignment.Center;
                 stringFormat.LineAlignment = StringAlignment.Center;
+                actors.AddRange(Diagram.actors);
             }
 
             public void Draw(PaintEventArgs e, int position)
@@ -397,6 +412,19 @@ namespace UseCase
                 set
                 {
                     color = value;
+                }
+            }
+
+            public List<Actor> Actors
+            {
+                get
+                {
+                    return actors;
+                }
+
+                set
+                {
+                    actors = value;
                 }
             }
         }
