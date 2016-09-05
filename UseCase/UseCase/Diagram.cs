@@ -15,7 +15,7 @@ namespace UseCaseHelper
 
         static int width;
 
-        public static void Draw(PaintEventArgs e)
+        public static void Draw(PaintEventArgs e) 
         {
             e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
             for(int i = 0; i < actors.Count; i++)
