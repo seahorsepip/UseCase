@@ -129,7 +129,7 @@
             this.panel3.MinimumSize = new System.Drawing.Size(0, 56);
             this.panel3.Name = "panel3";
             this.panel3.Padding = new System.Windows.Forms.Padding(0, 0, 0, 20);
-            this.panel3.Size = new System.Drawing.Size(541, 56);
+            this.panel3.Size = new System.Drawing.Size(541, 74);
             this.panel3.TabIndex = 2;
             // 
             // panel5
@@ -144,7 +144,7 @@
             this.panel5.Location = new System.Drawing.Point(120, 0);
             this.panel5.Margin = new System.Windows.Forms.Padding(0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(421, 36);
+            this.panel5.Size = new System.Drawing.Size(421, 54);
             this.panel5.TabIndex = 4;
             // 
             // comboBox1
@@ -159,7 +159,6 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(0, 38);
             this.comboBox1.TabIndex = 0;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // actorsBox
             // 
@@ -167,10 +166,11 @@
             this.actorsBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.actorsBox.Location = new System.Drawing.Point(0, 0);
             this.actorsBox.Margin = new System.Windows.Forms.Padding(0);
-            this.actorsBox.MaximumSize = new System.Drawing.Size(419, 0);
+            this.actorsBox.MaximumSize = new System.Drawing.Size(410, 0);
+            this.actorsBox.MinimumSize = new System.Drawing.Size(0, 52);
             this.actorsBox.Name = "actorsBox";
             this.actorsBox.Padding = new System.Windows.Forms.Padding(0, 0, 5, 7);
-            this.actorsBox.Size = new System.Drawing.Size(369, 34);
+            this.actorsBox.Size = new System.Drawing.Size(369, 52);
             this.actorsBox.TabIndex = 1;
             // 
             // button1
@@ -181,7 +181,7 @@
             this.button1.Font = new System.Drawing.Font("Segoe UI Symbol", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(369, 0);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(50, 34);
+            this.button1.Size = new System.Drawing.Size(50, 52);
             this.button1.TabIndex = 0;
             this.button1.Text = "✚";
             this.button1.UseVisualStyleBackColor = true;
@@ -193,7 +193,7 @@
             this.label3.Location = new System.Drawing.Point(0, 0);
             this.label3.Name = "label3";
             this.label3.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.label3.Size = new System.Drawing.Size(120, 36);
+            this.label3.Size = new System.Drawing.Size(120, 54);
             this.label3.TabIndex = 0;
             this.label3.Text = "Actors:";
             // 
@@ -202,7 +202,7 @@
             this.panel4.Controls.Add(this.textBox4);
             this.panel4.Controls.Add(this.label4);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(3, 189);
+            this.panel4.Location = new System.Drawing.Point(3, 207);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(541, 56);
             this.panel4.TabIndex = 3;

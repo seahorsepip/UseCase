@@ -288,7 +288,6 @@ namespace UseCase
 
                 stringFormat.Alignment = StringAlignment.Center;
                 stringFormat.LineAlignment = StringAlignment.Center;
-                actors.AddRange(Diagram.actors);
             }
 
             public void Draw(PaintEventArgs e, int position)
