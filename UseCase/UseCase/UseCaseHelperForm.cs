@@ -9,12 +9,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace UseCase
+namespace UseCaseHelper
 {
-    public partial class Form1 : Form
+    public partial class UseCaseHelperForm : Form
     {
         Diagram.Object focusedObject;
-        public Form1()
+        public UseCaseHelperForm()
         {
             InitializeComponent();
             Diagram.Width = diagram.Width;
@@ -54,6 +54,13 @@ namespace UseCase
                 focusedObject.Color = Color.DarkCyan;
                 name.Text = focusedObject.Name;
                 actions.Show();
+                if (focusedObject.GetType() == typeof(Diagram.UseCase))
+                {
+                    properties.Show();
+                } else
+                {
+                    properties.Hide();
+                }
             } else
             {
                 actions.Hide();
@@ -91,6 +98,14 @@ namespace UseCase
 
         private void remove_Click(object sender, EventArgs e)
         {
+            if (focusedObject.GetType() == typeof(Diagram.Actor))
+            {
+                Diagram.Actor actor = (Diagram.Actor)focusedObject;
+                foreach(Diagram.UseCase useCase in Diagram.UseCases)
+                {
+                    useCase.Actors.Remove(actor);
+                }
+            }
             focusedObject.Remove();
             diagram.Height = Diagram.Height;
             diagram.Invalidate();
@@ -108,7 +123,7 @@ namespace UseCase
 
         private void properties_Click(object sender, EventArgs e)
         {
-            new PropertiesForm((Diagram.UseCase)focusedObject).ShowDialog();
+            new PropertiesForm((Diagram.UseCase)focusedObject, diagram).ShowDialog();
         }
     }
 }
