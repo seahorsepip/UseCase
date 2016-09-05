@@ -1,4 +1,4 @@
-﻿namespace UseCaseHelper
+﻿namespace UseCase
 {
     partial class PropertiesForm
     {
@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.useCaseName = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.useCaseSummary = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -42,45 +42,32 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.useCaseAssuming = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.useCaseDescription = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.useCaseExceptions = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.useCaseResult = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.panel8.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.useCaseName);
+            this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(541, 56);
             this.panel1.TabIndex = 0;
             // 
-            // useCaseName
+            // textBox1
             // 
-            this.useCaseName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.useCaseName.Location = new System.Drawing.Point(140, 0);
-            this.useCaseName.Name = "useCaseName";
-            this.useCaseName.Size = new System.Drawing.Size(401, 31);
-            this.useCaseName.TabIndex = 1;
-            this.useCaseName.TextChanged += new System.EventHandler(this.useCaseName_TextChanged);
+            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox1.Location = new System.Drawing.Point(120, 0);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(421, 31);
+            this.textBox1.TabIndex = 1;
             // 
             // label1
             // 
@@ -88,20 +75,16 @@
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.label1.Size = new System.Drawing.Size(140, 56);
+            this.label1.Size = new System.Drawing.Size(120, 56);
             this.label1.TabIndex = 0;
             this.label1.Text = "Name:";
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.AutoSize = true;
             this.flowLayoutPanel1.Controls.Add(this.panel1);
             this.flowLayoutPanel1.Controls.Add(this.panel2);
             this.flowLayoutPanel1.Controls.Add(this.panel3);
             this.flowLayoutPanel1.Controls.Add(this.panel4);
-            this.flowLayoutPanel1.Controls.Add(this.panel6);
-            this.flowLayoutPanel1.Controls.Add(this.panel7);
-            this.flowLayoutPanel1.Controls.Add(this.panel8);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(20, 20);
@@ -111,21 +94,20 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.useCaseSummary);
+            this.panel2.Controls.Add(this.textBox2);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(3, 65);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(541, 56);
             this.panel2.TabIndex = 1;
             // 
-            // useCaseSummary
+            // textBox2
             // 
-            this.useCaseSummary.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.useCaseSummary.Location = new System.Drawing.Point(140, 0);
-            this.useCaseSummary.Name = "useCaseSummary";
-            this.useCaseSummary.Size = new System.Drawing.Size(401, 31);
-            this.useCaseSummary.TabIndex = 1;
-            this.useCaseSummary.TextChanged += new System.EventHandler(this.useCaseSummary_TextChanged);
+            this.textBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox2.Location = new System.Drawing.Point(120, 0);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(421, 31);
+            this.textBox2.TabIndex = 1;
             // 
             // label2
             // 
@@ -133,7 +115,7 @@
             this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Name = "label2";
             this.label2.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.label2.Size = new System.Drawing.Size(140, 56);
+            this.label2.Size = new System.Drawing.Size(120, 56);
             this.label2.TabIndex = 0;
             this.label2.Text = "Summary:";
             // 
@@ -159,10 +141,10 @@
             this.panel5.Controls.Add(this.actorsBox);
             this.panel5.Controls.Add(this.button1);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(140, 0);
+            this.panel5.Location = new System.Drawing.Point(120, 0);
             this.panel5.Margin = new System.Windows.Forms.Padding(0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(401, 54);
+            this.panel5.Size = new System.Drawing.Size(421, 54);
             this.panel5.TabIndex = 4;
             // 
             // comboBox1
@@ -173,7 +155,7 @@
             this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 8F);
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.IntegralHeight = false;
-            this.comboBox1.Location = new System.Drawing.Point(349, 0);
+            this.comboBox1.Location = new System.Drawing.Point(369, 0);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(0, 38);
             this.comboBox1.TabIndex = 0;
@@ -184,11 +166,11 @@
             this.actorsBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.actorsBox.Location = new System.Drawing.Point(0, 0);
             this.actorsBox.Margin = new System.Windows.Forms.Padding(0);
-            this.actorsBox.MaximumSize = new System.Drawing.Size(349, 0);
+            this.actorsBox.MaximumSize = new System.Drawing.Size(410, 0);
             this.actorsBox.MinimumSize = new System.Drawing.Size(0, 52);
             this.actorsBox.Name = "actorsBox";
             this.actorsBox.Padding = new System.Windows.Forms.Padding(0, 0, 5, 7);
-            this.actorsBox.Size = new System.Drawing.Size(349, 52);
+            this.actorsBox.Size = new System.Drawing.Size(369, 52);
             this.actorsBox.TabIndex = 1;
             // 
             // button1
@@ -197,7 +179,7 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI Symbol", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(349, 0);
+            this.button1.Location = new System.Drawing.Point(369, 0);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(50, 52);
             this.button1.TabIndex = 0;
@@ -211,13 +193,13 @@
             this.label3.Location = new System.Drawing.Point(0, 0);
             this.label3.Name = "label3";
             this.label3.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.label3.Size = new System.Drawing.Size(140, 54);
+            this.label3.Size = new System.Drawing.Size(120, 54);
             this.label3.TabIndex = 0;
             this.label3.Text = "Actors:";
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.useCaseAssuming);
+            this.panel4.Controls.Add(this.textBox4);
             this.panel4.Controls.Add(this.label4);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(3, 207);
@@ -225,14 +207,13 @@
             this.panel4.Size = new System.Drawing.Size(541, 56);
             this.panel4.TabIndex = 3;
             // 
-            // useCaseAssuming
+            // textBox4
             // 
-            this.useCaseAssuming.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.useCaseAssuming.Location = new System.Drawing.Point(140, 0);
-            this.useCaseAssuming.Name = "useCaseAssuming";
-            this.useCaseAssuming.Size = new System.Drawing.Size(401, 31);
-            this.useCaseAssuming.TabIndex = 1;
-            this.useCaseAssuming.TextChanged += new System.EventHandler(this.useCaseAssuming_TextChanged);
+            this.textBox4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox4.Location = new System.Drawing.Point(120, 0);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(421, 31);
+            this.textBox4.TabIndex = 1;
             // 
             // label4
             // 
@@ -240,108 +221,14 @@
             this.label4.Location = new System.Drawing.Point(0, 0);
             this.label4.Name = "label4";
             this.label4.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.label4.Size = new System.Drawing.Size(140, 56);
+            this.label4.Size = new System.Drawing.Size(120, 56);
             this.label4.TabIndex = 0;
             this.label4.Text = "Assuming:";
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.useCaseDescription);
-            this.panel6.Controls.Add(this.label5);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(3, 269);
-            this.panel6.Name = "panel6";
-            this.panel6.Padding = new System.Windows.Forms.Padding(0, 0, 0, 20);
-            this.panel6.Size = new System.Drawing.Size(541, 156);
-            this.panel6.TabIndex = 4;
-            // 
-            // useCaseDescription
-            // 
-            this.useCaseDescription.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.useCaseDescription.Location = new System.Drawing.Point(140, 0);
-            this.useCaseDescription.Multiline = true;
-            this.useCaseDescription.Name = "useCaseDescription";
-            this.useCaseDescription.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.useCaseDescription.Size = new System.Drawing.Size(401, 136);
-            this.useCaseDescription.TabIndex = 1;
-            this.useCaseDescription.TextChanged += new System.EventHandler(this.useCaseDescription_TextChanged);
-            // 
-            // label5
-            // 
-            this.label5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label5.Location = new System.Drawing.Point(0, 0);
-            this.label5.Name = "label5";
-            this.label5.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.label5.Size = new System.Drawing.Size(140, 136);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Description:";
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.useCaseExceptions);
-            this.panel7.Controls.Add(this.label6);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel7.Location = new System.Drawing.Point(3, 431);
-            this.panel7.Name = "panel7";
-            this.panel7.Padding = new System.Windows.Forms.Padding(0, 0, 0, 20);
-            this.panel7.Size = new System.Drawing.Size(541, 156);
-            this.panel7.TabIndex = 5;
-            // 
-            // useCaseExceptions
-            // 
-            this.useCaseExceptions.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.useCaseExceptions.Location = new System.Drawing.Point(140, 0);
-            this.useCaseExceptions.Multiline = true;
-            this.useCaseExceptions.Name = "useCaseExceptions";
-            this.useCaseExceptions.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.useCaseExceptions.Size = new System.Drawing.Size(401, 136);
-            this.useCaseExceptions.TabIndex = 1;
-            this.useCaseExceptions.TextChanged += new System.EventHandler(this.useCaseExceptions_TextChanged);
-            // 
-            // label6
-            // 
-            this.label6.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label6.Location = new System.Drawing.Point(0, 0);
-            this.label6.Name = "label6";
-            this.label6.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.label6.Size = new System.Drawing.Size(140, 136);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Exceptions:";
-            // 
-            // panel8
-            // 
-            this.panel8.Controls.Add(this.useCaseResult);
-            this.panel8.Controls.Add(this.label7);
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel8.Location = new System.Drawing.Point(3, 593);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(541, 56);
-            this.panel8.TabIndex = 6;
-            // 
-            // useCaseResult
-            // 
-            this.useCaseResult.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.useCaseResult.Location = new System.Drawing.Point(140, 0);
-            this.useCaseResult.Name = "useCaseResult";
-            this.useCaseResult.Size = new System.Drawing.Size(401, 31);
-            this.useCaseResult.TabIndex = 1;
-            this.useCaseResult.TextChanged += new System.EventHandler(this.useCaseResult_TextChanged);
-            // 
-            // label7
-            // 
-            this.label7.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label7.Location = new System.Drawing.Point(0, 0);
-            this.label7.Name = "label7";
-            this.label7.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.label7.Size = new System.Drawing.Size(140, 56);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Result:";
             // 
             // PropertiesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(587, 702);
             this.Controls.Add(this.flowLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -360,43 +247,27 @@
             this.panel5.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox useCaseName;
+        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox useCaseSummary;
+        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox useCaseAssuming;
+        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.FlowLayoutPanel actorsBox;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.TextBox useCaseDescription;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.TextBox useCaseExceptions;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.TextBox useCaseResult;
-        private System.Windows.Forms.Label label7;
     }
 }

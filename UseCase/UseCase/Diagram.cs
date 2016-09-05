@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace UseCaseHelper
+namespace UseCase
 {
     public static class Diagram
     {
@@ -65,19 +65,6 @@ namespace UseCaseHelper
             set
             {
                 actors = value;
-            }
-        }
-
-        public static List<UseCase> UseCases
-        {
-            get
-            {
-                return useCases;
-            }
-
-            set
-            {
-                useCases = value;
             }
         }
 
@@ -295,11 +282,6 @@ namespace UseCaseHelper
             Font font = new Font("Segoe UI", 12);
             StringFormat stringFormat = new StringFormat();
             List<Actor> actors = new List<Actor>();
-            string summary;
-            string assuming;
-            string description;
-            string exceptions;
-            string result;
 
             public UseCase()
             {
@@ -326,11 +308,6 @@ namespace UseCaseHelper
 
                 //Name
                 e.Graphics.DrawString(name, font, new SolidBrush(color), x + width / 2, y + height / 2, stringFormat);
-
-                foreach(Actor actor in actors)
-                {
-                    e.Graphics.DrawLine(pen, new Point(actor.X + actor.Width, actor.Y + actor.Height / 2), new Point(x, y + height / 2));
-                }
             }
 
             public void MoveUp()
@@ -447,71 +424,6 @@ namespace UseCaseHelper
                 set
                 {
                     actors = value;
-                }
-            }
-
-            public string Assuming
-            {
-                get
-                {
-                    return assuming;
-                }
-
-                set
-                {
-                    assuming = value;
-                }
-            }
-
-            public string Summary
-            {
-                get
-                {
-                    return summary;
-                }
-
-                set
-                {
-                    summary = value;
-                }
-            }
-
-            public string Exceptions
-            {
-                get
-                {
-                    return exceptions;
-                }
-
-                set
-                {
-                    exceptions = value;
-                }
-            }
-
-            public string Result
-            {
-                get
-                {
-                    return result;
-                }
-
-                set
-                {
-                    result = value;
-                }
-            }
-
-            public string Description
-            {
-                get
-                {
-                    return description;
-                }
-
-                set
-                {
-                    description = value;
                 }
             }
         }

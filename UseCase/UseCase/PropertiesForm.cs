@@ -8,42 +8,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace UseCaseHelper
+namespace UseCase
 {
     public partial class PropertiesForm : Form
     {
-        Diagram.UseCase useCase;
-        PictureBox diagram;
-
         List<Diagram.Actor> actors;
         List<Diagram.Actor> actorsComboBox;
-        public PropertiesForm(Diagram.UseCase useCase, PictureBox diagram)
+        public PropertiesForm(Diagram.UseCase useCase)
         {
-            this.useCase = useCase;
-            this.diagram = diagram;
             InitializeComponent();
             actors = useCase.Actors;
-            foreach (Diagram.Actor actor in actors)
-            {
-                ActorLabel actorLabel = new ActorLabel();
-                actorLabel.Text = actor.Name;
-                actorLabel.Tag = actor;
-                actorLabel.Click += new EventHandler(actorLabel_Click);
-                actorsBox.Controls.Add(actorLabel);
-            }
             updateComboBox();
-            useCaseName.Text = useCase.Name;
-            useCaseSummary.Text = useCase.Summary;
-            useCaseAssuming.Text = useCase.Assuming;
-            useCaseDescription.Text = useCase.Description;
-            useCaseExceptions.Text = useCase.Exceptions;
-            useCaseResult.Text = useCase.Result;
-
         }
 
         void updateComboBox()
         {
-            comboBox1.SelectedIndexChanged -= new EventHandler(comboBox1_SelectedIndexChanged);
+            comboBox1.SelectedIndexChanged -= new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             List<string> actorsName = new List<string>();
             actorsComboBox = new List<Diagram.Actor>();
             foreach (Diagram.Actor actor in Diagram.Actors)
@@ -64,9 +44,7 @@ namespace UseCaseHelper
                 comboBox1.Hide();
                 button1.Hide();
             }
-            comboBox1.SelectedIndexChanged += new EventHandler(comboBox1_SelectedIndexChanged);
-            useCase.Actors = actors;
-            diagram.Invalidate();
+            comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -78,7 +56,6 @@ namespace UseCaseHelper
             actorsBox.Controls.Add(actorLabel);
             actors.Add(actorsComboBox[comboBox1.SelectedIndex]);
             updateComboBox();
-
         }
 
         private void actorLabel_Click(object sender, EventArgs e)
@@ -93,42 +70,6 @@ namespace UseCaseHelper
         private void button1_Click(object sender, EventArgs e)
         {
             comboBox1.DroppedDown = true;
-        }
-
-        private void useCaseName_TextChanged(object sender, EventArgs e)
-        {
-            useCase.Name = useCaseName.Text;
-            diagram.Invalidate();
-        }
-
-        private void useCaseSummary_TextChanged(object sender, EventArgs e)
-        {
-            useCase.Summary = useCaseSummary.Text;
-            diagram.Invalidate();
-        }
-
-        private void useCaseExceptions_TextChanged(object sender, EventArgs e)
-        {
-            useCase.Exceptions = useCaseExceptions.Text;
-            diagram.Invalidate();
-        }
-
-        private void useCaseResult_TextChanged(object sender, EventArgs e)
-        {
-            useCase.Result = useCaseResult.Text;
-            diagram.Invalidate();
-        }
-
-        private void useCaseAssuming_TextChanged(object sender, EventArgs e)
-        {
-            useCase.Assuming = useCaseAssuming.Text;
-            diagram.Invalidate();
-        }
-
-        private void useCaseDescription_TextChanged(object sender, EventArgs e)
-        {
-            useCase.Description = useCaseDescription.Text;
-            diagram.Invalidate();
         }
     }
 

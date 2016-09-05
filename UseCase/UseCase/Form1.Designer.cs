@@ -1,6 +1,6 @@
-﻿namespace UseCaseHelper
+﻿namespace UseCase
 {
-    partial class UseCaseHelperForm
+    partial class Form1
     {
         /// <summary>
         /// Required designer variable.
@@ -35,12 +35,12 @@
             this.saveToImage = new System.Windows.Forms.Button();
             this.actions = new System.Windows.Forms.FlowLayoutPanel();
             this.name = new System.Windows.Forms.TextBox();
-            this.properties = new System.Windows.Forms.Button();
             this.moveUp = new System.Windows.Forms.Button();
             this.moveDown = new System.Windows.Forms.Button();
             this.remove = new System.Windows.Forms.Button();
             this.saveDiagramDialog = new System.Windows.Forms.SaveFileDialog();
             this.diagramWrapper = new System.Windows.Forms.Panel();
+            this.properties = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.diagram)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.actions.SuspendLayout();
@@ -54,7 +54,7 @@
             this.diagram.Location = new System.Drawing.Point(0, 0);
             this.diagram.Margin = new System.Windows.Forms.Padding(0);
             this.diagram.Name = "diagram";
-            this.diagram.Size = new System.Drawing.Size(1174, 0);
+            this.diagram.Size = new System.Drawing.Size(1269, 0);
             this.diagram.TabIndex = 0;
             this.diagram.TabStop = false;
             this.diagram.Click += new System.EventHandler(this.diagram_Click);
@@ -69,7 +69,7 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1174, 100);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1269, 100);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
             // addActor
@@ -128,9 +128,9 @@
             this.actions.Controls.Add(this.moveDown);
             this.actions.Controls.Add(this.remove);
             this.actions.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.actions.Location = new System.Drawing.Point(0, 1029);
+            this.actions.Location = new System.Drawing.Point(0, 888);
             this.actions.Name = "actions";
-            this.actions.Size = new System.Drawing.Size(1174, 100);
+            this.actions.Size = new System.Drawing.Size(1269, 100);
             this.actions.TabIndex = 0;
             this.actions.Visible = false;
             // 
@@ -143,22 +143,6 @@
             this.name.Size = new System.Drawing.Size(320, 31);
             this.name.TabIndex = 0;
             this.name.TextChanged += new System.EventHandler(this.name_TextChanged);
-            // 
-            // properties
-            // 
-            this.properties.AutoSize = true;
-            this.properties.FlatAppearance.BorderSize = 0;
-            this.properties.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.properties.Location = new System.Drawing.Point(380, 0);
-            this.properties.Margin = new System.Windows.Forms.Padding(0);
-            this.properties.MinimumSize = new System.Drawing.Size(0, 100);
-            this.properties.Name = "properties";
-            this.properties.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.properties.Size = new System.Drawing.Size(160, 100);
-            this.properties.TabIndex = 4;
-            this.properties.Text = "Properties";
-            this.properties.UseVisualStyleBackColor = true;
-            this.properties.Click += new System.EventHandler(this.properties_Click);
             // 
             // moveUp
             // 
@@ -220,20 +204,34 @@
             this.diagramWrapper.Dock = System.Windows.Forms.DockStyle.Fill;
             this.diagramWrapper.Location = new System.Drawing.Point(0, 100);
             this.diagramWrapper.Name = "diagramWrapper";
-            this.diagramWrapper.Size = new System.Drawing.Size(1174, 929);
+            this.diagramWrapper.Size = new System.Drawing.Size(1269, 788);
             this.diagramWrapper.TabIndex = 2;
             this.diagramWrapper.Click += new System.EventHandler(this.diagram_Click);
+            // 
+            // properties
+            // 
+            this.properties.AutoSize = true;
+            this.properties.FlatAppearance.BorderSize = 0;
+            this.properties.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.properties.Location = new System.Drawing.Point(380, 0);
+            this.properties.Margin = new System.Windows.Forms.Padding(0);
+            this.properties.MinimumSize = new System.Drawing.Size(0, 100);
+            this.properties.Name = "properties";
+            this.properties.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
+            this.properties.Size = new System.Drawing.Size(160, 100);
+            this.properties.TabIndex = 4;
+            this.properties.Text = "Properties";
+            this.properties.UseVisualStyleBackColor = true;
+            this.properties.Click += new System.EventHandler(this.properties_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1174, 1129);
+            this.ClientSize = new System.Drawing.Size(1269, 988);
             this.Controls.Add(this.diagramWrapper);
             this.Controls.Add(this.actions);
             this.Controls.Add(this.flowLayoutPanel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MinimumSize = new System.Drawing.Size(1200, 1200);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.diagram)).EndInit();
